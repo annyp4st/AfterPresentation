@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анкета ПОСЛЕ — плакаты</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .qBlock {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.14);
+        margin-top: 10px;
+      }
+      .qTitle {
+        font-weight: 800;
+        margin: 0 0 8px;
+      }
+      .opt {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 6px 0;
+        color: var(--text);
+      }
+      .opt input {
+        margin-top: 3px;
+      }
+      .textarea {
+        width: 100%;
+        min-height: 80px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: rgba(0, 0, 0, 0.18);
+        color: var(--text);
+        outline: none;
+        resize: vertical;
+      }
+      .resultBox {
+        width: 100%;
+        min-height: 180px;
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: rgba(0, 0, 0, 0.18);
+        color: var(--text);
+        outline: none;
+        resize: vertical;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 12px;
+        line-height: 1.35;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Анкета ПОСЛЕ (после занятия)</h1>
+        <p class="sub">Отметь ответы и нажми «Скопировать текст» — потом вставь его в мессенджер.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <label class="label" for="className">Класс:</label>
+          <input id="className" class="input" type="text" placeholder="Например: 9А" />
+        </div>
+        <div class="row">
+          <label class="label" for="studentName">Имя (можно не писать):</label>
+          <input id="studentName" class="input" type="text" placeholder="Например: Аня" />
+        </div>
+        <div class="row" style="display:none">
+          <label class="label" for="teacherEmail">E‑mail автора:</label>
+          <input id="teacherEmail" class="input" type="email" />
+        </div>
+      </section>
+
+      <section class="card">
+        <form id="surveyForm">
+          <div class="qBlock">
+            <p class="qTitle">1) Стало ли тебе интереснее изучать историю через плакаты после занятия?</p>
+            <label class="opt"><input type="radio" name="q1" value="да" />да</label>
+            <label class="opt"><input type="radio" name="q1" value="скорее да" />скорее да</label>
+            <label class="opt"><input type="radio" name="q1" value="скорее нет" />скорее нет</label>
+            <label class="opt"><input type="radio" name="q1" value="нет" />нет</label>
+          </div>
+
+          <div class="qBlock">
+            <p class="qTitle">
+              2) Хотел(а) бы ты посетить тульские музеи по этой теме (оружия/краеведческий/Крылова/обороны Тулы)?
+            </p>
+            <label class="opt"><input type="radio" name="q2" value="да" />да</label>
+            <label class="opt"><input type="radio" name="q2" value="скорее да" />скорее да</label>
+            <label class="opt"><input type="radio" name="q2" value="скорее нет" />скорее нет</label>
+            <label class="opt"><input type="radio" name="q2" value="нет" />нет</label>
+          </div>
+
+          <div class="qBlock">
+            <p class="qTitle">3) Что больше всего «зацепило»? (выбери 1–2)</p>
+            <label class="opt"><input type="checkbox" name="q3" value="плакаты 1941 года (призыв/мобилизация)" />плакаты 1941 года</label>
+            <label class="opt"><input type="checkbox" name="q3" value="плакаты 1942 года (защита мирных, «спаси/отомсти»)" />плакаты 1942 года</label>
+            <label class="opt"><input type="checkbox" name="q3" value="плакаты 1943–1944 (наступление/освобождение)" />плакаты 1943–1944</label>
+            <label class="opt"><input type="checkbox" name="q3" value="плакат/рисунок из Тулы («Тульское чаеБитие»)" />«Тульское чаеБитие»</label>
+            <label class="opt"><input type="checkbox" name="q3" value="квиз" />квиз</label>
+            <label class="opt"><input type="checkbox" name="q3" value="карта‑аудиогид по музеям" />карта‑аудиогид</label>
+          </div>
+
+          <div class="qBlock">
+            <p class="qTitle">4) Можешь ли ты объяснить смысл 2 символов на плакате? (цвет, жест, образ, предмет)</p>
+            <label class="opt"><input type="radio" name="q4" value="да" />да</label>
+            <label class="opt"><input type="radio" name="q4" value="нет" />нет</label>
+            <label class="opt"><input type="radio" name="q4" value="частично" />частично</label>
+            <p class="sub" style="margin-top: 8px">Если да/частично — напиши пример:</p>
+            <textarea id="free4" class="textarea" placeholder="Например: красный цвет = призыв/энергия, жест руки = обращение..."></textarea>
+          </div>
+
+          <div class="qBlock">
+            <p class="qTitle">5) Что из форматов тебе понравилось больше?</p>
+            <label class="opt"><input type="radio" name="q5" value="презентация" />презентация</label>
+            <label class="opt"><input type="radio" name="q5" value="квиз" />квиз</label>
+            <label class="opt"><input type="radio" name="q5" value="карта‑аудиогид" />карта‑аудиогид</label>
+            <label class="opt"><input type="radio" name="q5" value="обсуждение" />обсуждение</label>
+            <label class="opt"><input type="radio" name="q5" value="другое" />другое</label>
+          </div>
+
+          <div class="qBlock">
+            <p class="qTitle">6) Хочешь ли ты участвовать в конкурсе рисунков/плакатов для младших школьников?</p>
+            <label class="opt"><input type="radio" name="q6" value="да" />да</label>
+            <label class="opt"><input type="radio" name="q6" value="скорее да" />скорее да</label>
+            <label class="opt"><input type="radio" name="q6" value="скорее нет" />скорее нет</label>
+            <label class="opt"><input type="radio" name="q6" value="нет" />нет</label>
+          </div>
+
+          <div class="qBlock">
+            <p class="qTitle">7) Какой вывод ты сделал(а) о роли плакатов в годы войны? (1–2 предложения)</p>
+            <textarea id="free7" class="textarea" placeholder="Напиши коротко..."></textarea>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <button id="copyBtn" class="btn btnPrimary" type="button">Скопировать текст</button>
+        </div>
+        <textarea id="resultText" class="resultBox" readonly placeholder="Тут появится итоговый текст…"></textarea>
+        <p class="sub" style="margin-top: 8px">Скопированный текст просто вставь в чат и отправь.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Если копирование не сработало, выдели текст в поле и скопируй вручную.</p>
+      </footer>
+    </main>
+
+    <script src="./survey.js"></script>
+    <script>
+      SurveyApp.init({
+        title: "Анкета ПОСЛЕ — военные плакаты и Тула",
+        defaultEmail: "annyp4st@yandex.ru",
+        questions: [
+          { name: "q1", text: "Стало ли тебе интереснее изучать историю через плакаты после занятия?" },
+          { name: "q2", text: "Хотел(а) бы ты посетить тульские музеи по этой теме?" },
+          { name: "q3", text: "Что больше всего «зацепило»? (1–2 варианта)" },
+          { name: "q4", text: "Можешь ли ты объяснить смысл 2 символов на плакате?", freeName: "free4" },
+          { name: "q5", text: "Что из форматов понравилось больше?" },
+          { name: "q6", text: "Хочешь ли участвовать в конкурсе рисунков/плакатов?" },
+          { name: "q7", text: "Вывод о роли плакатов (свой ответ)", freeName: "free7" },
+        ],
+      });
+    </script>
+  </body>
+</html>
+
