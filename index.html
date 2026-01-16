@@ -103,7 +103,7 @@
             <label class="opt"><input type="checkbox" name="q3" value="плакаты 1942 года (защита мирных, «спаси/отомсти»)" />плакаты 1942 года</label>
             <label class="opt"><input type="checkbox" name="q3" value="плакаты 1943–1944 (наступление/освобождение)" />плакаты 1943–1944</label>
             <label class="opt"><input type="checkbox" name="q3" value="плакат/рисунок из Тулы («Тульское чаеБитие»)" />«Тульское чаеБитие»</label>
-            <label class="opt"><input type="checkbox" name="q3" value="квиз" />квиз</label>
+            <label class="opt"><input type="checkbox" name="q3" value="квиз/игра по станциям" />квиз/игра по станциям</label>
             <label class="opt"><input type="checkbox" name="q3" value="карта‑аудиогид по музеям" />карта‑аудиогид</label>
           </div>
 
@@ -119,14 +119,14 @@
           <div class="qBlock">
             <p class="qTitle">5) Что из форматов тебе понравилось больше?</p>
             <label class="opt"><input type="radio" name="q5" value="презентация" />презентация</label>
-            <label class="opt"><input type="radio" name="q5" value="квиз" />квиз</label>
+            <label class="opt"><input type="radio" name="q5" value="квиз/игра по станциям" />квиз/игра по станциям</label>
             <label class="opt"><input type="radio" name="q5" value="карта‑аудиогид" />карта‑аудиогид</label>
             <label class="opt"><input type="radio" name="q5" value="обсуждение" />обсуждение</label>
             <label class="opt"><input type="radio" name="q5" value="другое" />другое</label>
           </div>
 
           <div class="qBlock">
-            <p class="qTitle">6) Хочешь ли ты участвовать в конкурсе рисунков/плакатов для младших школьников?</p>
+            <p class="qTitle">6) Хочешь ли ты участвовать в конкурсе рисунков/плакатов?</p>
             <label class="opt"><input type="radio" name="q6" value="да" />да</label>
             <label class="opt"><input type="radio" name="q6" value="скорее да" />скорее да</label>
             <label class="opt"><input type="radio" name="q6" value="скорее нет" />скорее нет</label>
@@ -137,6 +137,15 @@
             <p class="qTitle">7) Какой вывод ты сделал(а) о роли плакатов в годы войны? (1–2 предложения)</p>
             <textarea id="free7" class="textarea" placeholder="Напиши коротко..."></textarea>
           </div>
+
+          <div class="qBlock">
+            <p class="qTitle">8) Менялись ли основная тема и настроение советских агитационных плакатов от начала к концу Великой Отечественной войны?</p>
+            <label class="opt"><input type="radio" name="q8" value="Не менялись, всегда призывали «бить врага» и «всё для фронта»" />Не менялись, всегда призывали «бить врага» и «всё для фронта»</label>
+            <label class="opt"><input type="radio" name="q8" value="Сдвигались от трагической обороны и мобилизации к наступательному порыву и радости победы" />Сдвигались от трагической обороны и мобилизации к наступательному порыву и радости победы</label>
+            <label class="opt"><input type="radio" name="q8" value="Становились всё более сложными и абстрактными, рассчитанными на интеллигенцию" />Становились всё более сложными и абстрактными, рассчитанными на интеллигенцию</label>
+            <label class="opt"><input type="radio" name="q8" value="Сначала воспевали технику, а потом - героизм пехоты" />Сначала воспевали технику, а потом - героизм пехоты</label>
+          </div>
+
         </form>
       </section>
 
@@ -166,9 +175,11 @@
           { name: "q5", text: "Что из форматов понравилось больше?" },
           { name: "q6", text: "Хочешь ли участвовать в конкурсе рисунков/плакатов?" },
           { name: "q7", text: "Вывод о роли плакатов (свой ответ)", freeName: "free7" },
+          { name: "q8", text: "Менялись ли основная тема и настроение советских агитационных плакатов от начала к концу Великой Отечественной войны?" },
         ],
       });
     </script>
   </body>
 </html>
+
 
